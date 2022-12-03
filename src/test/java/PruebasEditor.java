@@ -63,7 +63,7 @@ public class PruebasEditor {
 
     @Test
     public void numAparicionesTestC1(){ //funciona
-        // Poner vacio en editor.txt
+        // Poner vacio el editor.txt
         String mensajeError = null;
         String mensaje = "La línea de inicio no puede ser menor o igual a cero";
         try {
@@ -82,13 +82,12 @@ public class PruebasEditor {
 
     @Test
     public void numAparicionesTestC2(){ //funciona
-        // Poner tamañoDos en editor.txt
+        // Poner hasta tamañoDos en editor.txt
         String mensajeError = null;
         String mensaje = "La línea fin no puede ser mayor que el máximo de líneas";
         try {
             editor.numApariciones(1,3,"tamañoUno");
         }catch (IllegalArgumentException e){
-            // thrown = true;
             mensajeError = e.getMessage();
         }
         assertEquals(mensaje, mensajeError);
@@ -96,7 +95,7 @@ public class PruebasEditor {
 
     /*@Test(expected = IllegalArgumentException.class) //funciona
     public void numAparicionesTestC2(){
-        //poner tamañoDos en editor.txt
+        //poner hasta tamañoDos en editor.txt
         editor.numApariciones(1,3, "tamaño");
     }*/
 
@@ -108,20 +107,44 @@ public class PruebasEditor {
 
     @Test
     public void numAparicionesTestC4(){ // se para en la primera condición, es un camino que no será posible
-        //poner tamañoDos en editor.txt
+        //poner hasta tamañoDos en editor.txt
         assertEquals(0, editor.numApariciones(3,2, "tamañoUno"));
     }
 
     @Test
     public void numAparicionesTestC6(){
-        //poner tamañoUno en editor.txt
+        //poner hasta tamañoUno en editor.txt
         assertEquals(0, editor.numApariciones(1,1, "tamañoDos"));
     }
 
     @Test
     public void numAparicionesTestC7(){
-        //poner tamañoUno en editor.txt
+        //poner hasta tamañoUno en editor.txt
         assertEquals(1, editor.numApariciones(1,1, "tamañoUno"));
     }
 
+    @Test
+    public void numPalabrasTestC1(){
+        //poner vacío el editor.txt
+        String mensajeError = null;
+        String mensaje = "El editor está vacío";
+        try {
+            this.editor.numPalabras();
+        }catch (EmptyCollectionException e){
+            mensajeError = e.getMessage();
+        }
+        assertEquals(mensaje, mensajeError);
+    }
+
+   /* @Test (expected = EmptyCollectionException.class) //otra manera
+    public void numPalabrasTestC1o() throws EmptyCollectionException {
+        //poner vacío el editor.txt
+        this.editor.numPalabras();
+    }*/
+
+    @Test
+    public void numPalabrasTestC6() throws EmptyCollectionException {
+        //Poner tamañoUno en el editor.txt
+        assertEquals(1, this.editor.numPalabras());
+    }
 }
