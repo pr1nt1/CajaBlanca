@@ -37,7 +37,7 @@ public class Editor {
 	 * @throws EmptyCollectionException si el editor está vacío
 	 * @throws IllegalArgumentException Si el número de línea es incorrecta
 	 */
-	public AbstractSingleLinkedListImpl<String> getLinea(int linea) throws EmptyCollectionException {
+	public AbstractSingleLinkedListImpl<String> getLinea(int linea) throws EmptyCollectionException { //PROBAR
 		if (editor.isEmpty()) {
 			throw new EmptyCollectionException(" editor vacío ");
 		}
@@ -104,7 +104,7 @@ public class Editor {
 	 * @throws EmptyCollectionException
 	 * @throws IllegalArgumentException si inicio es &lt; 0 or fin &gt; size
 	 */
-	public int numApariciones(int inicio, int fin, String palabra) {
+	public int numApariciones(int inicio, int fin, String palabra) { //PROBAR
 		if (inicio <= 0)
 			throw new IllegalArgumentException("La línea de inicio no puede ser menor o igual a cero");
 		if (fin > this.editor.size())
@@ -135,7 +135,7 @@ public class Editor {
 	 * @return el número de palabras que hay en las distintas líneas del editor.  
 	 * @throws EmptyCollectionException
 	 */
-	public int numPalabras() throws EmptyCollectionException {
+	public int numPalabras() throws EmptyCollectionException { //PROBAR
 		if (this.editIsEmpty()) {
 			throw new EmptyCollectionException("El editor está vacío");
 		}
@@ -161,7 +161,7 @@ public class Editor {
 	 * @return la palabra de mayor longitud
 	 * @throws EmptyCollectionException
 	 */
-	public String palabraMasLarga() throws EmptyCollectionException {
+	public String palabraMasLarga() throws EmptyCollectionException { //PROBAR
 		String mayor = null;
 		if (this.editor.size() > 0) {
 			for (int i = 1; i <= this.editor.size(); i++) {
@@ -180,7 +180,7 @@ public class Editor {
 	}
 
 	
-	public boolean existePalabra (String palabra) {
+	public boolean existePalabra (String palabra) { //PROBAR
 		boolean encontrada = false;
 		int tamanio = this.editor.size();
 		int j;
@@ -203,7 +203,7 @@ public class Editor {
 	 * @param palabra
 	 * @param nuevaPalabra Sustituye palabra por nuevapalabra a lo largo de todo el texto
 	 */
-	public void sustituirPalabra(String palabra, String nuevaPalabra) {
+	public void sustituirPalabra(String palabra, String nuevaPalabra) { //PROBAR
 		if (this.editor.size() > 0) {
 			AbstractSingleLinkedListImpl<AbstractSingleLinkedListImpl<String>> nuevoEditor = 
 					new SingleLinkedListImpl<AbstractSingleLinkedListImpl<String>>();
