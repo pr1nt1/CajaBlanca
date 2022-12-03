@@ -5,8 +5,6 @@ import com.cajanegra.SingleLinkedListImpl;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -100,31 +98,31 @@ public class PruebasEditor {
     }*/
 
     @Test
-    public void numAparicionesTestC3(){
+    public void numAparicionesTestC3(){ //funciona
         //poner vacío el editor.txt
         assertEquals(0, editor.numApariciones(2,0, "tamañoUno"));
     }
 
     @Test
-    public void numAparicionesTestC4(){ // se para en la primera condición, es un camino que no será posible
+    public void numAparicionesTestC4(){ //funciona
         //poner hasta tamañoDos en editor.txt
         assertEquals(0, editor.numApariciones(3,2, "tamañoUno"));
     }
 
     @Test
-    public void numAparicionesTestC6(){
+    public void numAparicionesTestC6(){ //funciona
         //poner hasta tamañoUno en editor.txt
         assertEquals(0, editor.numApariciones(1,1, "tamañoDos"));
     }
 
     @Test
-    public void numAparicionesTestC7(){
+    public void numAparicionesTestC7(){ //funciona
         //poner hasta tamañoUno en editor.txt
         assertEquals(1, editor.numApariciones(1,1, "tamañoUno"));
     }
 
     @Test
-    public void numPalabrasTestC1(){
+    public void numPalabrasTestC1(){ //funciona
         //poner vacío el editor.txt
         String mensajeError = null;
         String mensaje = "El editor está vacío";
@@ -143,7 +141,7 @@ public class PruebasEditor {
     }*/
 
     @Test
-    public void numPalabrasTestC6() throws EmptyCollectionException {
+    public void numPalabrasTestC6() throws EmptyCollectionException { //funciona
         //Poner tamañoUno en el editor.txt
         assertEquals(1, this.editor.numPalabras());
     }
