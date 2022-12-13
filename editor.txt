@@ -1,3 +1,0 @@
-tamañoUno
-tamañoDos
-tamañoTres

@@ -145,4 +145,45 @@ public class PruebasEditor {
         //Poner tamañoUno en el editor.txt
         assertEquals(1, this.editor.numPalabras());
     }
+
+
+    @Test
+    public void palabraMasLargaTestC1() throws EmptyCollectionException {
+        //Poner vacío el editor.txt
+        assertNull(this.editor.palabraMasLarga());
+    }
+
+    @Test
+    public void palabraMasLargaTestC4() throws EmptyCollectionException {
+        //Poner mariposa en el editor.txt
+        assertEquals("mariposa", this.editor.palabraMasLarga());
+    }
+
+    @Test
+    public void palabraMasLargaTest() throws EmptyCollectionException {
+        //Poner
+        //mariposa mari lola
+        //lepo vinos
+        //jeje palabraMasLargaYo
+        // en el editor.txt
+        assertEquals("palabraMasLargaYo", this.editor.palabraMasLarga());
+    }
+
+    @Test
+    public void existePalabraTestC1() {
+        //Poner vacio el editor.txt
+        assertFalse(this.editor.existePalabra("hola"));
+    }
+
+    @Test
+    public void existePalabraTestC4() {
+        //Poner hola en el editor.txt
+        assertTrue(this.editor.existePalabra("hola"));
+    }
+
+    @Test
+    public void existePalabraTestC5() {
+        //Poner hola en el editor.txt
+        assertFalse(this.editor.existePalabra("adios"));
+    }
 }
