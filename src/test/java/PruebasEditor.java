@@ -186,4 +186,33 @@ public class PruebasEditor {
         //Poner hola en el editor.txt
         assertFalse(this.editor.existePalabra("adios"));
     }
+
+    @Test
+    public void sustituirPalabraC1() {
+        //poner vacio el editor
+        this.editor.sustituirPalabra("", "");
+        assertTrue(this.editor.editIsEmpty());
+    }
+
+    @Test
+    public void sustituirPalabraC2() throws EmptyCollectionException {
+        this.editor.sustituirPalabra("hola", "adios");
+        assertEquals(this.editor.getLinea(1).toString(), "[]");
+        assertEquals(this.editor.getLinea(2).toString(), "[adios]");
+    }
+
+    @Test
+    public void sustituirPalabraC3() {
+
+    }
+
+    @Test
+    public void sustituirPalabraC4() {
+
+    }
+
+    @Test
+    public void sustituirPalabraC5() {
+
+    }
 }
