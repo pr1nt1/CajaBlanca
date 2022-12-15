@@ -154,7 +154,7 @@ class Grafo {
 		}
 	}
 
-	private boolean todosVisitados() {
+	private boolean todosVisitados() { //PROBAR
 		for (Integer clave : this.listAdy.keySet()) {
 			if (this.visitados[clave] == false) {
 				return false;
@@ -171,7 +171,7 @@ class Grafo {
 		System.out.println("]");
 	}
 
-	public void printListaAdyacentes(int v) {
+	public void printListaAdyacentes(int v) {  //PROBAR
 		List<Arco> listaAdy = this.listAdy.get(v);
 		System.out.print("Adyacentes de " + v + ": ");
 		for (Arco arco : listaAdy) {
@@ -180,7 +180,7 @@ class Grafo {
 		System.out.println();
 	}
 
-	public String componentsRelated() {
+	public String componentsRelated() { //PROBAR
 		Queue<Integer> queue = new LinkedList<Integer>();
 		int nVert;
 		nVert = this.listAdy.size();
@@ -222,7 +222,7 @@ class Grafo {
 	 * @param vertice
 	 * @return La componente a la que pertenece el vértice
 	 */
-	public String BFS(int vertice) {
+	public String BFS(int vertice) { //PROBAR
 		if (!this.listAdy.containsKey(vertice)) {
 			throw new NoSuchElementException("No existe ese vertice en el grafo");
 		}
@@ -258,7 +258,7 @@ class Grafo {
 		return lista;
 	}
 
-	public Grafo kruskal() {
+	public Grafo kruskal() { //PROBAR
 		Grafo g = new Grafo();
 		for(Arco a : this.listaArcos) {
 			g.addVertice(a.getOrigen());
