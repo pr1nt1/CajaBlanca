@@ -195,24 +195,18 @@ public class PruebasEditor {
     }
 
     @Test
-    public void sustituirPalabraC2() throws EmptyCollectionException {
+    public void sustituirPalabraC4() throws EmptyCollectionException {
+        //Poner linea vacia \n hola en editor.txt
         this.editor.sustituirPalabra("hola", "adios");
         assertEquals(this.editor.getLinea(1).toString(), "[]");
         assertEquals(this.editor.getLinea(2).toString(), "[adios]");
     }
 
     @Test
-    public void sustituirPalabraC3() {
-
-    }
-
-    @Test
-    public void sustituirPalabraC4() {
-
-    }
-
-    @Test
-    public void sustituirPalabraC5() {
-
+    public void sustituirPalabraC5() throws EmptyCollectionException {
+        //Poner hola \n jiju en el editor.txt
+        this.editor.sustituirPalabra("hola", "adios");
+        assertEquals(this.editor.getLinea(1).toString(), "[adios]");
+        assertEquals(this.editor.getLinea(2).toString(), "[jiju]");
     }
 }
